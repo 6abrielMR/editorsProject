@@ -16,6 +16,10 @@ CREATE TABLE IF NOT EXISTS editoriales(
     CONSTRAINT pk_editoriales PRIMARY KEY(id)
 )ENGINE = InnoDb;
 
+INSERT INTO editoriales VALUES(111111, 'Planeta', 'Bogota');
+INSERT INTO editoriales VALUES(222222, 'Kimpres', 'Medellin');
+INSERT INTO editoriales VALUES(333333, 'Bolivar Impresores', 'Cali');
+
 CREATE TABLE IF NOT EXISTS libros(
     ISBN INT(13) NOT NULL,
     editoriales_id INT(10) NOT NULL,
