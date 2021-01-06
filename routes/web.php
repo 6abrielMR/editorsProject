@@ -15,6 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 use App\Models\Editorial;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\EditorialController::class, 'index'])->name('mainview');
