@@ -9,10 +9,8 @@ use App\Models\Editorial;
 class EditorialController extends Controller
 {
     public function index() {
-        $editoriales = Editorial::orderBy('id', 'asc')->simplePaginate(10);
-        return view('editorial.index', [
-            'publishers' => $editoriales
-        ]);
+        $publishers = Editorial::orderBy('id', 'asc')->simplePaginate(10);
+        return view('editorial.index', compact('publishers'));
     }
 
     public function create() {
@@ -21,7 +19,7 @@ class EditorialController extends Controller
 
     public function save(Request $request) {
         $validate = $this->validate($request, [
-            'id' => ['required', 'numeric', 'max::10'],
+            'id' => ['required', 'string', 'max:10'],
             'nombre' => ['required', 'string', 'max:45'],
             'sede' => ['required', 'string', 'max:45']
         ]);
@@ -31,7 +29,7 @@ class EditorialController extends Controller
         $sede = $request->input('sede');
 
         $publisher = new Editorial();
-        $publisher->id = $id;
+        $publisher->id = (int) $id;
         $publisher->nombre = $nombre;
         $publisher->sede = $sede;
 
@@ -41,5 +39,10 @@ class EditorialController extends Controller
             'state' => true,
             'message' => 'Se creo correctamente la editorial.'
         ]);
+    }
+
+    public function list($id) {
+        $publisher = Editorial::where('id', '=', $id)->get()[0];
+        return view('editorial.lista', compact('publisher'));
     }
 }

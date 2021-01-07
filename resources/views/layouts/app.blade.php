@@ -37,7 +37,7 @@
                     <ul>
                         <li><a href="{{ route('mainview') }}"><i class="far fa-list-alt"></i> Ver editoriales</a></li>
                         <li><a href="{{ route('editorial.create') }}"><i class="fas fa-plus-circle"></i> Crear editorial</a></li>
-                        <li><a href="#"><i class="fas fa-book"></i> Crear libro</a></li>
+                        <li><a href="{{ route('libro.create') }}"><i class="fas fa-book"></i> Crear libro</a></li>
                     </ul>
                 </div>
                 <div class="col-10 main-content">@yield('content')</div>

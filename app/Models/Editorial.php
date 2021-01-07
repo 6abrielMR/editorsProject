@@ -12,6 +12,6 @@ class Editorial extends Model
     protected $table = 'editoriales';
 
     public function libros() {
-        return $this->hasMany('App\Models\Libro');
+        return $this->hasMany('App\Models\Libro', 'editoriales_id');
     }
 }

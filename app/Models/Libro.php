@@ -12,7 +12,7 @@ class Libro extends Model
     protected $table = 'libros';
 
     public function editorial() {
-        return $this->hasMany('App\Models\Libro');
+        return $this->belongsTo('App\Models\Editorial');
     }
 
     public function autores() {
