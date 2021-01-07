@@ -18,7 +18,7 @@
                     <tr>
                         <th scope="row">{{ $book->ISBN }}</th>
                         <td>{{ $book->titulo }}</td>
-                        @if ($book->sede)
+                        @if ($book->sinopsis)
                             <td>{{ $book->sinopsis }}</td>
                         @else
                             <td>Sin sinopsis</td>
