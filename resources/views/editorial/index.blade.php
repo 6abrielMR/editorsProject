@@ -1,11 +1,22 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editores</title>
-</head>
-<body>
-    <h1>Autores</h1>
-</body>
-</html>
+@extends('layouts.app')
+
+@section('content')
+<div class="container content">
+    <h1>Editoriales</h1>
+    <table class="table table-hover content-table">
+        <thead>
+            <tr class="bg-primary">
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Sede</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($publishers as $publisher)
+                @include('includes.row-table', ['publisher'=>$publisher])
+            @endforeach
+        </tbody>
+    </table>
+    {{ $publishers->links() }}
+</div>
+@endsection

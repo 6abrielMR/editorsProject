@@ -1,0 +1,56 @@
+main {
+    min-height: 92vh;
+}
+
+.brand {
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+}
+
+.main-menu ul {
+    padding: 0;
+    list-style: none;
+}
+
+.main-menu ul:first-child {
+    margin-top: 16px;
+}
+
+.main-menu ul > li {
+    margin: 16px 1vw;
+}
+
+.main-menu ul > li > a {
+    text-decoration: none;
+    color: #c2c2c2;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all ease-in-out 150ms;
+}
+
+.main-menu ul li > a:hover {
+    width: 100%;
+    padding: 10px 1vw;
+    color: #007BFF;
+    background: #daefff;
+    border-radius: 16px;
+}
+
+.main-content {
+    min-height: 92vmin;
+    background: #F1F5F8;
+}
+
+/* Editoriales */
+
+.content {
+    margin-top: 50px;
+}
+
+.content h1 {
+    font-weight: 500;
+}
+
+.content-table {
+    margin-top: 40px;
+}
