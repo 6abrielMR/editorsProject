@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Editorial;
 
 Route::get('/', [App\Http\Controllers\EditorialController::class, 'index'])->name('mainview');
+Route::get('/editorial/crear', [App\Http\Controllers\EditorialController::class, 'create'])->name('editorial.create');
+
+// hidden routes
+Route::post('/editorial/save-publisher', [App\Http\Controllers\EditorialController::class, 'save'])->name('editorial.save');

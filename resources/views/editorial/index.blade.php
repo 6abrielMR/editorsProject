@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container content">
+    @include('includes.message')
     <h1>Editoriales</h1>
     <table class="table table-hover content-table">
         <thead>

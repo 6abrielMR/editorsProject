@@ -35,8 +35,8 @@
             <div class="row">
                 <div class="col-2 pt-4 main-menu">
                     <ul>
-                        <li><a href="#"><i class="far fa-list-alt"></i> Ver editoriales</a></li>
-                        <li><a href="#"><i class="fas fa-plus-circle"></i> Crear editorial</a></li>
+                        <li><a href="{{ route('mainview') }}"><i class="far fa-list-alt"></i> Ver editoriales</a></li>
+                        <li><a href="{{ route('editorial.create') }}"><i class="fas fa-plus-circle"></i> Crear editorial</a></li>
                         <li><a href="#"><i class="fas fa-book"></i> Crear libro</a></li>
                     </ul>
                 </div>

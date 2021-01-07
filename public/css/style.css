@@ -54,3 +54,10 @@ main {
 .content-table {
     margin-top: 40px;
 }
+
+/* Crear editorial */
+
+.header-section {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
